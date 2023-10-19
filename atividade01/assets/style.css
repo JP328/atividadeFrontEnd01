@@ -39,7 +39,7 @@ label {
 input {
   all: unset;
   font-size: 1.5rem;
-  background-color: transparent;
+  background-color: transparent !important;
   border-bottom: solid 2px white;
 }
 
@@ -47,7 +47,11 @@ textarea {
   all: unset;
   font-size: 1.5rem;
   padding: 0.5rem;
-  background-color: #ffffff3f;
+  background-color: #ff880041;
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent !important;
 }
 
 button {
@@ -73,7 +77,11 @@ a {
   font-weight: bold;
   font-size: 1.5rem;
   color: aliceblue;         
+}
 
+a:hover {
+  font-weight: 500;
+  color: rgb(212, 220, 226);
 }
 
 h1 {
@@ -97,7 +105,14 @@ ul {
 }
 
 p {
-  font-size: 1.5rem; text-align: justify; margin: 0 2rem; margin-bottom: 2.4rem;
+  font-size: 1.5rem; 
+  text-align: justify; 
+  margin: 0 3rem; 
+  margin-bottom: 2.4rem;
+}
+
+div p {
+  margin-bottom: 0;
 }
 
 .logo {
@@ -131,15 +146,23 @@ p {
   position: absolute;
   top: 0;
   z-index: -1;
-  opacity: 60%
 }
 
-.mapa {
+.opacity-65 {
+  opacity: 65%
+}
+
+.opacity-35 {
+  opacity: 45%;
+}
+
+#mapa {
   margin: 1rem 3rem;
 }
 
 .alinhar {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
   align-items: center;
